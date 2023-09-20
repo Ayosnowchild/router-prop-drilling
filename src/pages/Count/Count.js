@@ -1,11 +1,12 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import "./count.css";
 import One from "../../components/One";
 import Two from "../../components/Two";
 import Three from "../../components/Three";
 import Four from "../../components/Four";
+import { CountContext } from "../../App";
 function Count() {
-  const [count, setCount] = useState(0);
+  const { count, setCount } = useContext(CountContext);
   const add = () => {
     setCount((prev) => {
       if (prev >= 50) {
